@@ -16,7 +16,7 @@
     $subject = "Svadba; potvrda dolaska";
 
     $logo = 'img/logo.png';
-    $link = '#';
+    $link = 'dajana.di.v@gmail.com";
 
 	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
 	$body .= "<table style='width: 100%;'>";

@@ -48,7 +48,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.html#contact-form"><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -116,13 +116,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <form id="contact-form" action="#" method="POST">
+                            <form id="contact-form" onSubmit="return checkAnswer();">
                                 <div class="row">
                                     <div class="col-lg-12">
                                       </div>
                                     <div class="col-lg-12">
                                         <div class="form-box subject-icon mb-30">
-                                            <input type="Email" name="subject" placeholder="Šifra  - 4 broja">
+                                            <input id="code" name="subject" placeholder="Šifra  - 4 broja">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
@@ -169,7 +169,7 @@
                          <div class="col-xl-12 ">
                              <div class="footer-copy-right text-center">
                                  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template made by <a href="https://colorlib.com" target="_blank">Colorlib | </a> Edited with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://divdesignstudio.com/" target="_blank"> Dajana Dobraš</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Template made by <a href="https://colorlib.com" target="_blank">Colorlib | </a> Edited with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://divdesignstudio.com/" target="_blank"> Dajana Dobraš</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                              </div>
                          </div>
@@ -217,6 +217,15 @@
 		<!-- Jquery Plugins, main Jquery -->	
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
-        
+        <script>
+            function checkAnswer(){
+                var response = document.getElementById('code').value;
+                if (response == "2905")
+                    location = 'first.html';
+                else
+                    alert( "Kod nije ispravan" );
+                return false;
+            }
+        </script>
     </body>
 </html>
